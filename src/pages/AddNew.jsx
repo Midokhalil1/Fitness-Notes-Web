@@ -1,5 +1,7 @@
+// const AddNew = () => {
 
-
+// }
+ 
 
 export default function AddNew() {
     return (
@@ -7,3 +9,5 @@ export default function AddNew() {
 
     )
 }
+
+

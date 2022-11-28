@@ -3,19 +3,38 @@ import { Button } from "antd"
 export default function Header() {
     return(
         <ul className="header-container">
-            <a href="/">Home</a>
+            <Button type="primary" href="/">Home</Button>
            
             <Link to={'/add-new'}>
-            <Button type="link" htmlType="button">
+            <Button type="primary" htmlType="button">
                 Add Notes
             </Button>
             </Link>
+
             <Link to={'/sign-in'}>
-            <Button type="link" htmlType="button">
+
+            <Button type="primary" htmlType="button">
                 Sign-in
             </Button>
+
             </Link>
             {/* <a href="/add note">Add Note</a> */}
         </ul>
     )
 }
+
+
+
+// import React from 'react';
+// import { Button, Space } from 'antd';
+// const App = () => (
+//   <Space wrap>
+
+//     <Button type="primary">HOME</Button>
+    
+//     <Button type="primary">Add New Notes</Button>
+//     <Button type="primary">Sign In</Button>
+   
+//   </Space>
+// );
+// export default App;
