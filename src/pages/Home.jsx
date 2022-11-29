@@ -1,7 +1,7 @@
 
-import { useEffect, useState } from "react";
-import Hero from "../components/Hero";
+// import { useEffect, useState } from "react";
 // import Hero from "../components/Hero";
+// // import Hero from "../components/Hero";
 
 
 

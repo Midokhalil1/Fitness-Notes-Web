@@ -53,3 +53,8 @@
       monospace;
   }
   
+  .header-container {
+
+    display: flex;
+    justify-content: space-evenly;
+  }
