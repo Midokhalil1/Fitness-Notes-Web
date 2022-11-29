@@ -5,7 +5,7 @@ export default function Header() {
         <ul className="header-container">
             <Button type="primary" href="/">Home</Button>
            
-            <Link to={'/add-new'}>
+            <Link to={'/Notes'}>
             <Button type="primary" htmlType="button">
                 Add Notes
             </Button>

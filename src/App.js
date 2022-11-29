@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import AddNew from './pages/AddNew';
+import Notes from './pages/Notes';
 import Home from './pages/Home'
 import './assets/Styles.css';
 import Header from './components/Header'
@@ -11,7 +11,7 @@ function App() {
  <Header />
  <Routes>
 <Route path='/' element={<Home />} />
-<Route path='/Add-new' element={<AddNew />} />
+<Route path='/Notes' element={<Notes />} />
 
  </Routes>
  <Footer />
