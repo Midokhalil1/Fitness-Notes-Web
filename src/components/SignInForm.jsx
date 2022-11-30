@@ -11,10 +11,10 @@ const App = () => {
     <Form
       name="basic"
       labelCol={{
-        span: 8,
+        span: 6,
       }}
       wrapperCol={{
-        span: 16,
+        span: 8,
       }}
       initialValues={{
         remember: true,

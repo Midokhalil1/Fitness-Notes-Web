@@ -3,7 +3,7 @@ export default function ExerciseNotes() {
   const [notes, setNotes] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:4050/notes")
+    fetch(`${process.env.REACT_APP_ENDPOINT}/notes`)
       .then((results) => results.json())
       .then((data) => setNotes(data))
       .catch(alert);
