@@ -12,6 +12,7 @@ const App = () => {
       name="basic"
       labelCol={{
         span: 6,
+        
       }}
       wrapperCol={{
         span: 8,
