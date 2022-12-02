@@ -1,21 +1,20 @@
-import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import React from "react";
+import { Button, Checkbox, Form, Input } from "antd";
 const App = () => {
   const onFinish = (values) => {
-    console.log('Success:', values);
+    console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
+    console.log("Failed:", errorInfo);
   };
   return (
     <Form
       name="basic"
       labelCol={{
-        span: 6,
-        
+        span: 15,
       }}
       wrapperCol={{
-        span: 8,
+        span: 5,
       }}
       initialValues={{
         remember: true,
@@ -30,7 +29,7 @@ const App = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: "Please input your username!",
           },
         ]}
       >
@@ -43,7 +42,7 @@ const App = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: "Please input your password!",
           },
         ]}
       >
@@ -54,7 +53,7 @@ const App = () => {
         name="remember"
         valuePropName="checked"
         wrapperCol={{
-          offset: 8,
+          offset: 10,
           span: 16,
         }}
       >
@@ -63,7 +62,7 @@ const App = () => {
 
       <Form.Item
         wrapperCol={{
-          offset: 8,
+          offset: 16,
           span: 16,
         }}
       >
