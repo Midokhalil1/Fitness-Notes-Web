@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
+// import logo1 from '../assets/logo1.png'
 const App = () => {
   const onFinish = (values) => {
     console.log("Success:", values);
@@ -33,6 +34,10 @@ const App = () => {
           },
         ]}
       >
+        {/* <div>
+          <img src="/assets/logo1.png" alt="" />
+        </div> */}
+
         <Input />
       </Form.Item>
 
