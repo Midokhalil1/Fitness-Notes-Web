@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(45deg, rgb(151, 64, 64), rgb(42, 42, 140));
+  /* background-image: linear-gradient(circle, rgba(238,174,202,1) 0%, rgba(44,97,161,1) 100%); */
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgb(175, 99, 132) 0%, rgb(35, 106, 193) 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -68,7 +70,7 @@ video {
 }
 
 .card {
-  border: solid green 20px;
+  /* border: solid green 20px; */
 }
 
 .notes {
