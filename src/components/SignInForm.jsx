@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
-// import logo1 from '../assets/logo1.png'
+import logo1 from '../assets/logo1.png'
+import '../assets/Styles.css'
+
 const App = () => {
   const onFinish = (values) => {
     console.log("Success:", values);
@@ -9,13 +11,20 @@ const App = () => {
     console.log("Failed:", errorInfo);
   };
   return (
+
+    <>
+     <div className="logo-container">
+              <img src={logo1} alt=""className="logo1" />
+            </div>
+   
+
     <Form
       name="basic"
       labelCol={{
-        span: 15,
+        span: 9,
       }}
       wrapperCol={{
-        span: 5,
+        span: 7,
       }}
       initialValues={{
         remember: true,
@@ -23,7 +32,9 @@ const App = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
-    >
+      >
+     
+
       <Form.Item
         label="Username"
         name="username"
@@ -34,9 +45,7 @@ const App = () => {
           },
         ]}
       >
-        {/* <div>
-          <img src="/assets/logo1.png" alt="" />
-        </div> */}
+     
 
         <Input />
       </Form.Item>
@@ -76,6 +85,7 @@ const App = () => {
         </Button>
       </Form.Item>
     </Form>
+    </>
   );
 };
 export default App;

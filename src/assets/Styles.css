@@ -6,7 +6,7 @@
 body {
   /* background-image: linear-gradient(circle, rgba(238,174,202,1) 0%, rgba(44,97,161,1) 100%); */
   background: rgb(238,174,202);
-background: radial-gradient(circle, rgb(175, 99, 132) 0%, rgb(35, 106, 193) 100%);
+  background: radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(44,97,161,1) 69%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -56,9 +56,9 @@ video {
   display: flex;
   /* background-color: yellow; */
   color: black;
-  padding: 3px;
-  position: relative;
-  float: right;
+  padding: 1px;
+  position:relative;
+  float:right;
   box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px,
   rgba(0, 0, 0, 0.22) 0px 10px 10px; ;
 }
@@ -77,11 +77,38 @@ video {
   display: flex;
   flex-direction: column;
   width: 35%;
-  margin: 1%;
-  border-radius: 10px;
+  margin: 2%;
+  border-radius: 20px;
   /* background-color: hotpink; */
   justify-content: center;
   align-items: center;
   box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px; ;
+}
+
+
+.ant-form, ant-form-horizontal css-dev-only-do-not-override-qofb5{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  
+}
+
+.logo1 {
+ display: flex;
+width: 18vw;
+height: 50vh;
+ /* margin-top: 200px; */
+ box-shadow: rgba(173, 92, 92, 0.22);
+ 
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 150vw;
+  height: 150vh; */
 }

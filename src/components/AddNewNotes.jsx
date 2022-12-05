@@ -79,13 +79,13 @@ export default function AddPost({setNotes}) {
       <ul className='notes-container'>
         <h1>Add Note</h1>
         <form className='form' action='submit' onSubmit={submitPost}>
-          <label htmlFor=''>runs</label>
+          <label htmlFor=''>Runs</label>
           <input name='runs' type='text' onChange={handleForm} />
           <br />
-          <label htmlFor=''>cycling</label>
+          <label htmlFor=''>Cycling</label>
           <input name='cycling' type='text' onChange={handleForm} />
           <br />
-          <label htmlFor=''>gym</label>
+          <label htmlFor=''>Gym</label>
           <input name='gym' type='text' onChange={handleForm} />
           <br />
           <label htmlFor=''>Date</label>

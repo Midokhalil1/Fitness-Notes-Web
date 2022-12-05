@@ -30,7 +30,8 @@ export default function ExerciseNotes({ notes, setNotes }) {
             ]}
           >
             <Meta
-              description={[note.runs, note.cycling, note.gym, note.date]}
+              description={`${note.runs}, ${note.cycling} , ${note.gym} , ${note.date}`}
+              
             />
           </Card>
           // <p key={note._id}>
