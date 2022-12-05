@@ -6,8 +6,8 @@ export default function Notes() {
     const [notes, setNotes] = useState(); 
     return (
         <>
-        <ExerciseNotes notes={notes} setNotes={setNotes}/>
         <AddNewNotes setNotes={setNotes} />
+        <ExerciseNotes notes={notes} setNotes={setNotes}/>
        
         
 

@@ -76,9 +76,9 @@ export default function AddPost({setNotes}) {
     console.log(form)
   
     return (
-      <div className='container'>
+      <ul className='notes-container'>
         <h1>Add Note</h1>
-        <form action='submit' onSubmit={submitPost}>
+        <form className='form' action='submit' onSubmit={submitPost}>
           <label htmlFor=''>runs</label>
           <input name='runs' type='text' onChange={handleForm} />
           <br />
@@ -87,14 +87,15 @@ export default function AddPost({setNotes}) {
           <br />
           <label htmlFor=''>gym</label>
           <input name='gym' type='text' onChange={handleForm} />
+          <br />
           <label htmlFor=''>Date</label>
           <input name='date' type='date' onChange={handleForm} />
           <br />
           <button type='submit' onClick={submitPost}>
-            Add new note
+            Submit
           </button>
         </form>
-      </div>
+      </ul>
     )
   }
 
