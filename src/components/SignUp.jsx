@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { initializeApp } from "firebase/app"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
+import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBAG6pJYsHxHs6STxAGWZDldgtm1e4em5s",
@@ -12,6 +13,7 @@ const firebaseConfig = {
   };
   
 export default function Signup({ setUser }) {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const handleSignup = async (e) => {
@@ -21,6 +23,7 @@ export default function Signup({ setUser }) {
     const response = await createUserWithEmailAndPassword(auth, email, password)
       .catch(alert)
     setUser(response.user)
+    navigate('/Notes')
   }
   return (
     <>

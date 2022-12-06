@@ -1,23 +1,28 @@
 import { Link } from "react-router-dom";
 import { Button } from "antd";
-export default function Header() {
+import { useState } from "react";
+export default function Header({ user }) {
   return (
     <ul className="header-container">
       <Button type="primary" href="/">
         Home
       </Button>
+      {!user ? ( //if NOT user show sign in
+        <>
+          <Link to={"/sign-in"}>
+            <Button type="primary" htmlType="button">
+              Sign-in
+            </Button>
+          </Link>
+        </>
+      ) : ( //else show notes
+        <Link to={"/Notes"}>
+          <Button type="primary" htmlType="button">
+            Add Notes
+          </Button>
+        </Link>
+      )}
 
-      <Link to={"/Notes"}>
-        <Button type="primary" htmlType="button">
-          Add Notes
-        </Button>
-      </Link>
-
-      <Link to={"/sign-in"}>
-        <Button type="primary" htmlType="button">
-          Sign-in
-        </Button>
-      </Link>
       {/* <a href="/add note">Add Note</a> */}
     </ul>
   );
