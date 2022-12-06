@@ -6,7 +6,7 @@
 body {
   /* background-image: linear-gradient(circle, rgba(238,174,202,1) 0%, rgba(44,97,161,1) 100%); */
   background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(44,97,161,1) 69%);
+  background: radial-gradient(circle, rgb(172, 69, 28) 32%, rgb(221, 114, 25) 69%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -98,10 +98,13 @@ video {
 
 .logo1 {
  display: flex;
-width: 20vw;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+width: 18vw;
 height: 40vh;
- /* margin-top: 200px; */
- box-shadow: rgba(173, 92, 92, 0.22);
+
+
  
 }
 
@@ -111,4 +114,31 @@ height: 40vh;
   justify-content: center;
   /* width: 150vw;
   height: 150vh; */
+}
+
+.signup-page{
+ 
+  width: 30%;
+  margin: 20px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container{
+  display: flex;
+  
+ 
+  margin: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn{
+  margin:auto
 }

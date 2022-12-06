@@ -26,7 +26,7 @@ export default function Signup({ setUser }) {
     navigate('/Notes')
   }
   return (
-    <>
+    <div>
       <h1>Signup</h1>
       <form onSubmit={handleSignup}>
         <label htmlFor="email">Email:{' '}
@@ -41,6 +41,6 @@ export default function Signup({ setUser }) {
         </label><br />
         <button type="submit">Signup</button>
       </form>
-    </>
+    </div>
   )
 }

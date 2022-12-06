@@ -53,6 +53,7 @@ import { useState } from "react"
 
 export default function AddPost({setNotes}) {
     const [form, setForm] = useState({})
+    const [updated, setUpdated] = useState(false)
   
     const submitPost = e => {
       e.preventDefault()
@@ -65,7 +66,10 @@ export default function AddPost({setNotes}) {
         body: JSON.stringify(form),
       })
       .then((results) => results.json())
-      .then((data) => setNotes(data))
+      .then((data) => {
+        setUpdated(!updated)
+        setNotes(data)
+      })
 
     }
   
