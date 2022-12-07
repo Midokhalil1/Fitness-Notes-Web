@@ -36,7 +36,7 @@ export default function Signup({ setUser }) {
         </label><br />
         <label htmlFor="password">Password:{' '}
           <input type="password" name="password"
-            value={password} onChange={e => setPassword(e.target.value)}
+            value={password} onChange={e => setPassword(e.target.dnsbaXASCTV)}
             placeholder="•••••••" />
         </label><br />
         <button type="submit">Signup</button>

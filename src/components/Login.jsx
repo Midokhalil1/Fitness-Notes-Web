@@ -19,7 +19,9 @@ const firebaseConfig = {
   messagingSenderId: "146775143479",
   appId: "1:146775143479:web:e5ca96d4c424c2ecaefbb2",
 };
-
+/* im  creating two usestate variables and im setting the
+ state to an initial value of nothing so that later on in my code i can set 
+ them to the users response */
 export default function Login({ setUser }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -50,65 +52,65 @@ export default function Login({ setUser }) {
         <img src={logo1} alt="" className="logo1" />
       </div>
       <div className="form-container">
-      <Form
-        name="basic"
-      
-        initialValues={{
-          remember: true,
-        }}
-        onFinish={handleLogin}
-        // onFinishFailed={onFinishFailed}
-        autoComplete="off"
-      >
-      
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: "Please input your email!",
-            },
-          ]}
+        <Form
+          name="basic"
+          initialValues={{
+            remember: true,
+          }}
+          onFinish={handleLogin}
+          // onFinishFailed={onFinishFailed}
+          autoComplete="off"
         >
-          <Input value={email} onChange={(e) => setEmail(e.target.value)} />
-        </Form.Item>
-        
-        <Form.Item
-          label="Password"
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please input your password!",
-            },
-          ]}
-        >
-          <Input.Password
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Item>
-        {/* <label htmlFor="password">Password:{' '}
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              {
+                required: true,
+                message: "Please input your email!",
+              },
+            ]}
+          >
+            <Input value={email} onChange={(e) => setEmail(e.target.value)} />
+          </Form.Item>
+
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: "Please input your password!",
+              },
+            ]}
+          >
+            <Input.Password
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Item>
+          {/* <label htmlFor="password">Password:{' '}
           <input type="password" name="password"
             value={password} onChange={e => setPassword(e.target.value)}
             placeholder="•••••••" />
         </label> */}
-        
-        <Form.Item>
-          <Button className="submit-btn" type="primary" htmlType="submit">
-            Submit
-          </Button>
-          {/* <Link href="/sign-up" variant="body2">
+
+          <Form.Item>
+            <Button className="submit-btn" type="primary" htmlType="submit">
+              Submit
+            </Button>
+            {/* <Link href="/sign-up" variant="body2">
             {"Don't have an account yet? Sign Up"}
           </Link> */}
-        </Form.Item>
-        {/* <button type="submit">Login</button> */}
-        {/* </form> */}
-      </Form>
+          </Form.Item>
+          {/* <button type="submit">Login</button> */}
+          {/* </form> */}
+        </Form>
       </div>
       <br />
-      <Button className="submit-btn" type="primary" onClick={handleGoogleLogin}>Sign in with Google</Button>
+      <Button className="submit-btn" type="primary" onClick={handleGoogleLogin}>
+        Sign in with Google
+      </Button>
     </div>
   );
 }

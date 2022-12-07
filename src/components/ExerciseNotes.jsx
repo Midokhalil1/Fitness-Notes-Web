@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+// tell React that your component needs to do something after render
 import { Card } from "antd";
 import { EditOutlined, DeleteOutlined, PlusOutlined } from "@ant-design/icons";
 
