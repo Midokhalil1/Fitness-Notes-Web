@@ -18,7 +18,9 @@ export default function ExerciseNotes({ notes, setNotes }) {
       {notes &&
         notes.map((note) => (
           <Card
+          hoverable
           className="card"
+          key={note._id}
             title={note.title}
             style={{
               width: 300,
@@ -34,11 +36,7 @@ export default function ExerciseNotes({ notes, setNotes }) {
               
             />
           </Card>
-          // <p key={note._id}>
-          //   {note.runs}
-          //   {note.gym}
-          //   {note.cycling}
-          // </p>
+       
         ))}
     </div>
   );

@@ -10,14 +10,14 @@ export default function Header({ user }) {
       {!user ? ( //if NOT user show sign in
         <>
           <Link to={"/sign-in"}>
-            <Button type="primary" htmlType="button">
+          <Button type="primary" htmlType="button">
               Sign-in
             </Button>
           </Link>
         </>
       ) : ( //else show notes
         <Link to={"/Notes"}>
-          <Button type="primary" htmlType="button">
+          <Button type="primary" >
             Add Notes
           </Button>
         </Link>

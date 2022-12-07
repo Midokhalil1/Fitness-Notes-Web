@@ -25,7 +25,7 @@ export default function Login({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleLogin = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const app = initializeApp(firebaseConfig); // connects to Firebase
     const auth = getAuth(app); // connects us to Firebase Auth
     const response = await signInWithEmailAndPassword(
@@ -52,12 +52,7 @@ export default function Login({ setUser }) {
       <div className="form-container">
       <Form
         name="basic"
-        // labelCol={{
-        //   span: 9,
-        // }}
-        // wrapperCol={{
-        //   span: 7,
-        // }}
+      
         initialValues={{
           remember: true,
         }}
@@ -65,12 +60,7 @@ export default function Login({ setUser }) {
         // onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        {/* <form onSubmit={handleLogin}> */}
-        {/* <label htmlFor="email">Email:{' '}
-          <input type="email" name="email"
-            value={email} onChange={e => setEmail(e.target.value)}
-            placeholder="yourname@domain.com" />
-        </label> */}
+      
         <Form.Item
           label="Email"
           name="email"

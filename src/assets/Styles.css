@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  /* background-image: linear-gradient(circle, rgba(238,174,202,1) 0%, rgba(44,97,161,1) 100%); */
+  
   background: rgb(238,174,202);
-  background: radial-gradient(circle, rgb(172, 69, 28) 32%, rgb(221, 114, 25) 69%);
+  background: radial-gradient(circle, rgba(151, 149, 123, 0.952) 32%, rgb(74, 111, 55) 69%);
   color: white;
   font-family: "Poppins", sans-serif;
+  
   min-height: 100vh;
 }
 header {
@@ -21,16 +22,7 @@ header {
 
 
 
-.App-header {
-  background-color: #0053f9;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 
 .header-container {
@@ -52,15 +44,16 @@ video {
 }
 
 .notes-container{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  display: flex;
-  /* background-color: yellow; */
-  color: black;
-  padding: 1px;
-  position:relative;
-  float:right;
+  
+  display: inline;
+  
   box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px,
-  rgba(0, 0, 0, 0.22) 0px 10px 10px; ;
+  rgba(35, 34, 34, 0.22) 0px 10px 10px; ;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+ 
+  
 }
  
 
@@ -70,7 +63,20 @@ video {
 }
 
 .card {
-  /* border: solid green 20px; */
+  display: flex;
+  /* box-shadow: rgb(214, 63, 63); */
+  flex-direction: column;
+  margin: 3%;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;;
+  box-shadow:rgb(228, 14, 14) 0px 14px 28px,
+  rgba(224, 4, 4, 0.895) 0px 10px 10px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight:bolder;
+  
+  
+ 
 }
 
 .notes {
@@ -84,6 +90,7 @@ video {
   align-items: center;
   box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px; ;
+    
 }
 
 
@@ -105,6 +112,7 @@ width: 18vw;
 height: 40vh;
 
 
+
  
 }
 
@@ -112,6 +120,7 @@ height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
   /* width: 150vw;
   height: 150vh; */
 }
@@ -132,6 +141,7 @@ height: 40vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .ant-form {
@@ -140,5 +150,6 @@ height: 40vh;
 }
 
 .submit-btn{
-  margin:auto
+  margin:auto;
 }
+
