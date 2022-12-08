@@ -64,6 +64,10 @@ export default function AddPost({setNotes}) {
           <input  name='cycling' type='text' onChange={handleForm} />
           <br />
           <br />
+          <label  htmlFor=''>Swimming</label>
+          <input  name='swimming' type='text' onChange={handleForm} />
+          <br />
+          <br />
           <label htmlFor=''>Gym</label>
           <input name='gym' type='text' onChange={handleForm} />
           <br />

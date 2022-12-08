@@ -21,6 +21,7 @@ export default function ExerciseNotes({ notes, setNotes }) {
       <div className="logo-container">
         <img src={logo1} alt="" className="logo1" />
       </div>
+      <div className="card-container">
       {notes &&
         notes.map((note) => (
           <Card
@@ -40,6 +41,7 @@ export default function ExerciseNotes({ notes, setNotes }) {
             <section>
               <p>Runs: {note.runs}</p>
               <p>Cycling: {note.cycling}</p>
+              <p>Swimming: {note.swimming}</p>
               <p>Gym: {note.gym}</p>
               <p>Date {note.date}</p>
 
@@ -55,6 +57,7 @@ export default function ExerciseNotes({ notes, setNotes }) {
           </Card>
        
         ))}
+        </div>
     </div>
   );
 }
