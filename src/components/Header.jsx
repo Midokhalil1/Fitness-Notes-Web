@@ -17,7 +17,7 @@ export default function Header({ user }) {
         </>
       ) : ( //else show notes
         <Link to={"/Notes"}>
-          <Button type="primary" >
+          <Button type="primary" hoverable>
             My Notes
           </Button>
         </Link>
