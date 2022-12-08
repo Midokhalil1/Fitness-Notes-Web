@@ -45,12 +45,13 @@ export default function AddPost({setNotes}) {
   
     return (
 
-      <>
+      <div>
     
-      <Button type="primary" onClick={showModal}>
+      <button className='plusbutton' type="primary" onClick={showModal}>
       
-        Add New Notes
-      </Button>
+        +
+      </button>
+      <div/>
       
       <Modal    open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
       <h1>Add Note</h1>
@@ -76,7 +77,7 @@ export default function AddPost({setNotes}) {
           </button>
         </form>
       </Modal>
-    </>
+    </div>
   );
 };
       // <ul className='notes-container'>

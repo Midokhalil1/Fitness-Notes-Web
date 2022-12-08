@@ -2,6 +2,7 @@ import { useEffect } from "react";
 // tell React that your component needs to do something after render
 import { Card } from "antd";
 import { EditOutlined, DeleteOutlined, PlusOutlined } from "@ant-design/icons";
+import logo1 from "../assets/logo1.png";
 
 const { Meta } = Card;
 export default function ExerciseNotes({ notes, setNotes }) {
@@ -15,7 +16,11 @@ export default function ExerciseNotes({ notes, setNotes }) {
       .catch(alert);
   }, [setNotes]);
   return (
+    
     <div >
+      <div className="logo-container">
+        <img src={logo1} alt="" className="logo1" />
+      </div>
       {notes &&
         notes.map((note) => (
           <Card
@@ -27,15 +32,26 @@ export default function ExerciseNotes({ notes, setNotes }) {
               width: 300,
             }}
             actions={[
-              <PlusOutlined key="add" />,
+              // <PlusOutlined key="add" />,
               <EditOutlined key="edit" />,
               <DeleteOutlined key="delete" />,
             ]}
           >
-            <Meta
+            <section>
+              <p>Runs: {note.runs}</p>
+              <p>Cycling: {note.cycling}</p>
+              <p>Gym: {note.gym}</p>
+              <p>Date {note.date}</p>
+
+            </section>
+
+
+
+
+            {/* <Meta
               description={`${note.runs}, ${note.cycling} , ${note.gym} , ${note.date}`}
               
-            />
+            /> */}
           </Card>
        
         ))}

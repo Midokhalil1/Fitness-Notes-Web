@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Header({ user }) {
   return (
     <ul className="header-container">
-      <Button type="primary" href="/">
+      <Button className="home-button" type="primary" href="/">
         Home
       </Button>
       {!user ? ( //if NOT user show sign in

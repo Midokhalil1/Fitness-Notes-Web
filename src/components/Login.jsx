@@ -62,11 +62,12 @@ export default function Login({ setUser }) {
           autoComplete="off"
         >
           <Form.Item
+            className="formItem"
             label="Email"
             name="email"
             rules={[
               {
-                required: true,
+                required: false,
                 message: "Please input your email!",
               },
             ]}
@@ -75,11 +76,12 @@ export default function Login({ setUser }) {
           </Form.Item>
 
           <Form.Item
+            className="formItem"
             label="Password"
             name="password"
             rules={[
               {
-                required: true,
+                required: false,
                 message: "Please input your password!",
               },
             ]}
@@ -95,7 +97,7 @@ export default function Login({ setUser }) {
             placeholder="•••••••" />
         </label> */}
 
-          <Form.Item>
+          <Form.Item className="formItem">
             <Button className="submit-btn" type="primary" htmlType="submit">
               Submit
             </Button>
@@ -107,7 +109,6 @@ export default function Login({ setUser }) {
           {/* </form> */}
         </Form>
       </div>
-      <br />
       <Button className="submit-btn" type="primary" onClick={handleGoogleLogin}>
         Sign in with Google
       </Button>
