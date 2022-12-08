@@ -39,6 +39,7 @@ export default function ExerciseNotes({ notes, setNotes }) {
             ]}
           >
             <section>
+              <p>Day: {note.day}</p>
               <p>Runs: {note.runs}</p>
               <p>Cycling: {note.cycling}</p>
               <p>Swimming: {note.swimming}</p>

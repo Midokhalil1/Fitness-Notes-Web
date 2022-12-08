@@ -56,6 +56,11 @@ export default function AddPost({setNotes}) {
       <Modal    open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
       <h1>Add Note</h1>
         <form className='notes-container' action='submit' onSubmit={submitPost}>
+
+        <label htmlFor=''>Day</label>
+          <input placeholder='Mon/Tue/Wed/Thr/Fri/Sat/Sun' name='day' type='text' onChange={handleForm} />
+          <br />
+          <br />
           <label htmlFor=''>Runs</label>
           <input name='runs' type='text' onChange={handleForm} />
           <br />
