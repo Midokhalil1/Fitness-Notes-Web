@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Checkbox, Form, Input } from "antd";
 import logo1 from "../assets/logo1.png";
 import "../assets/Styles.css";
+import SignUp from "./SignUp"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBAG6pJYsHxHs6STxAGWZDldgtm1e4em5s",
@@ -99,7 +100,7 @@ export default function Login({ setUser }) {
 
           <Form.Item className="formItem">
             <Button className="submit-btn" type="primary" htmlType="submit">
-              Submit
+              Login
             </Button>
             {/* <Link href="/sign-up" variant="body2">
             {"Don't have an account yet? Sign Up"}
@@ -109,9 +110,12 @@ export default function Login({ setUser }) {
           {/* </form> */}
         </Form>
       </div>
-      <Button className="submit-btn" type="primary" onClick={handleGoogleLogin}>
+      <div className="sign-in-container">
+      <button className="submit-btn login-form-btn" type="primary" onClick={handleGoogleLogin}>
         Sign in with Google
-      </Button>
+      </button>
+      <button className="login-form-btn"  id="sign-up-css"   onClick={() => {navigate("/sign-up")}}>Not a user? Sign up now!</button>
+      </div>
     </div>
   );
 }

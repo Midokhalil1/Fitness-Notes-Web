@@ -2,6 +2,7 @@ import { useState } from "react"
 import { initializeApp } from "firebase/app"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import { useNavigate } from "react-router-dom";
+import logo1 from "../assets/logo1.png";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBAG6pJYsHxHs6STxAGWZDldgtm1e4em5s",
@@ -26,7 +27,8 @@ export default function Signup({ setUser }) {
     navigate('/Notes')
   }
   return (
-    <div>
+    
+    <div className="sign-up-css">
       <h1>Signup</h1>
       <form onSubmit={handleSignup}>
         <label htmlFor="email">Email:{' '}
