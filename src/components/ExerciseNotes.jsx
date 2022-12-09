@@ -32,14 +32,15 @@ export default function ExerciseNotes({ notes, setNotes }) {
             style={{
               width: 300,
             }}
-            actions={[
-              // <PlusOutlined key="add" />,
-              <EditOutlined key="edit" />,
-              <DeleteOutlined key="delete" />,
-            ]}
+            // actions={[
+            //   // <PlusOutlined key="add" />,
+            //   <EditOutlined  className="edit-button"   key="edit" />,
+            //   <DeleteOutlined className="edit-button" key="delete" />,
+            // ]}
           >
             <section>
-              <p className="day-color">DAY: {note.day}</p> <p className="day-color">DATE: {note.date}</p>
+              <p className="day-color">DAY: {note.day}</p> <p className="day-color">DATE: {note.date}</p> 
+              
               <br />
               <p>RUN: {note.runs}</p>
               <p>CYCLE: {note.cycling}</p>

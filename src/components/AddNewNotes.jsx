@@ -79,8 +79,12 @@ export default function AddPost({setNotes}) {
           <br />
           <label htmlFor=''>Date</label>
           <input name='date' type='date' onChange={handleForm} />
+
+         
           <br />
           <br />
+
+        
           <button type='submit' onClick={submitPost}>
             Submit
           </button>
