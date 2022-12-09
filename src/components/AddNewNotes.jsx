@@ -61,16 +61,16 @@ export default function AddPost({setNotes}) {
           <input placeholder='Mon/Tue/Wed/Thr/Fri/Sat/Sun' name='day' type='text' onChange={handleForm} />
           <br />
           <br />
-          <label htmlFor=''>Runs</label>
+          <label htmlFor=''>Run</label>
           <input name='runs' type='text' onChange={handleForm} />
           <br />
           <br />
-          <label  htmlFor=''>Cycling</label>
-          <input  name='cycling' type='text' onChange={handleForm} />
+          <label  htmlFor=''>Cycle</label>
+          <input  name='cycle' type='text' onChange={handleForm} />
           <br />
           <br />
-          <label  htmlFor=''>Swimming</label>
-          <input  name='swimming' type='text' onChange={handleForm} />
+          <label  htmlFor=''>Swim</label>
+          <input  name='swim' type='text' onChange={handleForm} />
           <br />
           <br />
           <label htmlFor=''>Gym</label>

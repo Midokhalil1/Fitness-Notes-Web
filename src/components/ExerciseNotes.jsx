@@ -39,12 +39,13 @@ export default function ExerciseNotes({ notes, setNotes }) {
             ]}
           >
             <section>
-              <p>Day: {note.day}</p>
-              <p>Runs: {note.runs}</p>
-              <p>Cycling: {note.cycling}</p>
-              <p>Swimming: {note.swimming}</p>
-              <p>Gym: {note.gym}</p>
-              <p>Date {note.date}</p>
+              <p className="day-color">DAY: {note.day}</p> <p className="day-color">DATE: {note.date}</p>
+              <br />
+              <p>RUN: {note.runs}</p>
+              <p>CYCLE: {note.cycling}</p>
+              <p>SWIM: {note.swimming}</p>
+              <p>GYM: {note.gym}</p>
+             
 
             </section>
 
