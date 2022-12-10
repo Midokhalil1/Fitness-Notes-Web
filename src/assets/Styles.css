@@ -5,7 +5,7 @@
 }
 body {
   background: rgb(241,241,241);
-background: radial-gradient(circle, rgb(147, 150, 166) 0%, rgba(14, 43, 69, 0.903) 54%);
+background: radial-gradient(circle, rgb(147, 150, 166) 0%, rgba(5, 25, 42, 0.906) 54%);
   /* background-image: linear-gradient( 135deg, #291556 10%, #793da4 100%); */
   color: white;
   font-family: "Poppins", sans-serif;
@@ -82,21 +82,21 @@ video {
 
  .card-container{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap; 
   
- }
+ } 
 
- @media only screen and (max-width: 650px){
+ @media only screen and (max-width: 600px){
   .card-container{
     justify-content: center;
   }
  }
 
- @media only screen and (max-width: 1095px){
+ @media only screen and (max-width: 900px){
   .card-container{
     justify-content: center;
   }
- }
+ } */
 
 
 .form {
@@ -107,7 +107,7 @@ video {
   display: flex;
   background-color: rgba(238, 239, 227, 0.939);
   flex-direction: column;
-  margin: 3%;
+  margin: 6.6%;
   align-items: center;
   justify-content: center;
   padding: 2px;;
