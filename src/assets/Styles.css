@@ -5,7 +5,7 @@
 }
 body {
   background: rgb(241,241,241);
-background: radial-gradient(circle, rgb(147, 150, 166) 0%, rgba(10, 37, 61, 0.843) 54%);
+background: radial-gradient(circle, rgb(147, 150, 166) 0%, rgba(14, 43, 69, 0.903) 54%);
   /* background-image: linear-gradient( 135deg, #291556 10%, #793da4 100%); */
   color: white;
   font-family: "Poppins", sans-serif;
@@ -72,7 +72,7 @@ video {
   display: inline;
   
   box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px,
-  rgba(35, 34, 34, 0.22) 0px 10px 10px; ;
+  rgba(23, 23, 23, 0.22) 0px 10px 10px; ;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   
@@ -105,7 +105,7 @@ video {
 
 .card {
   display: flex;
-  background-color: rgba(236, 233, 250, 0.727);
+  background-color: rgba(238, 239, 227, 0.939);
   flex-direction: column;
   margin: 3%;
   align-items: center;
@@ -170,12 +170,12 @@ height: 29vh;
 
 .signup-page{
   width: 30%;
-  background-color: rgba(44, 55, 70, 0.612);
+  background-color: rgba(56, 73, 96, 0.612);
   padding: 20px;
   border-style: solid;
-  border-color: #a6ddf6e4;
+  border-color: #c4e5f5e4;
   border-radius: 20px;
-  box-shadow: #00fbfff0 0px 5px 15px;
+  box-shadow: #0aaee9fd 0px 5px 15px;
   /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;; */
   
 
@@ -296,4 +296,9 @@ cursor: pointer;
   width: 100vh;
   margin: 20px auto 20px auto;
   height:100vh
+  }
+
+  .submit-button{
+    background-color:rgba(12, 172, 236, 0.895);
+
   }

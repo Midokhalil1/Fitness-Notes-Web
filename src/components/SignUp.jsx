@@ -41,7 +41,7 @@ export default function Signup({ setUser }) {
             value={password} onChange={e => setPassword(e.target.dnsbaXASCTV)}
             placeholder="•••••••" />
         </label><br />
-        <button type="submit">Signup</button>
+        <button className="submit-button" type="submit">Signup</button>
       </form>
     </div>
   )

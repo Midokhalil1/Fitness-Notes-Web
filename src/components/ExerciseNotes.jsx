@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Checkbox } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
 // tell React that your component needs to do something after render
 import { Card } from "antd";
@@ -16,77 +17,95 @@ export default function ExerciseNotes({ notes, setNotes }) {
       })
       .catch(alert);
   }, [setNotes]);
-  const navigate = useNavigate()
-  const {id} = useParams()
-  
-  function deleteNotes (id) {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  function deleteNotes(id) {
     fetch(`${process.env.REACT_APP_ENDPOINT}/notes/${id}`, {
       method: "DELETE",
-    headers: {
-        'Content-Type': 'application/json'
-    } 
-})
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then(() => {
         fetch(`${process.env.REACT_APP_ENDPOINT}/notes`)
           .then((response) => response.json())
           .then((data) => {
-            setNotes(data)
-            navigate('/notes')
+            setNotes(data);
+            navigate("/notes");
           });
       })
       .catch((err) => {
         alert(err);
-      }); 
-  };
-
-
+      });
+  }
+  function updateNote(e, id) {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/notes/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ complete: e.target.checked }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setNotes(data);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
 
   return (
-    
-    <div >
+    <div>
       <div className="logo-container">
         <img src={logo1} alt="" className="logo1" />
       </div>
       <div className="card-container">
-      {notes &&
-        notes.map((note) => (
-          <Card
-          hoverable
-          className="card"
-          key={note._id}
-            title={note.title}
-            style={{
-              width: 300,
-            }}
-            actions={[
-              // <PlusOutlined key="add" />,
-              // <EditOutlined  className="edit-button"   key="edit" />,
-              <DeleteOutlined className="edit-button" key="delete" onClick={() => deleteNotes(note._id)}/>,
-            ]}
-          >
-            <section>
-              <p className="day-color">DAY: {note.day}</p> <p className="day-color">DATE: {note.date}</p> 
-              <p>Time: {note.time}</p>
-              <br />
-              <p>RUN: {note.runs}</p>
-              <p>CYCLE: {note.cycling}</p>
-              <p>SWIM: {note.swimming}</p>
-              <p>GYM: {note.gym}</p>
-             
+        {notes &&
+          notes.map((note) => (
+            <Card
+              hoverable
+              className="card"
+              key={note._id}
+              title={note.title}
+              style={{
+                width: 300,
+              }}
+              actions={[
+                // <PlusOutlined key="add" />,
+                // <EditOutlined  className="edit-button"   key="edit" />,
+                <DeleteOutlined
+                  className="edit-button"
+                  key="delete"
+                  onClick={() => deleteNotes(note._id)}
+                />,
+              ]}
+            >
+              <section>
+                <Checkbox
+                  onChange={(e) => updateNote(e, note._id)}
+                  checked={note?.complete}
+                >
+                  Checkbox{" "}
+                </Checkbox>
+                <p className="day-color">DAY: {note.day}</p>{" "}
+                <p className="day-color">DATE: {note.date}</p>
+                
+                <br />
+                <p>RUN: {note.runs}</p>
+                <p>CYCLE: {note.cycling}</p>
+                <p>SWIM: {note.swimming}</p>
+                <p>GYM: {note.gym}</p>
+              </section>
 
-            </section>
-
-
-
-
-            {/* <Meta
+              {/* <Meta
               description={`${note.runs}, ${note.cycling} , ${note.gym} , ${note.date}`}
               
             /> */}
-          </Card>
-       
-        ))}
-        </div>
+            </Card>
+          ))}
+      </div>
     </div>
   );
 }
