@@ -88,6 +88,8 @@ video {
  .card-container{
   display: flex;
   flex-wrap:wrap; 
+  justify-content: center;
+  align-items: center;
   
  } 
 
@@ -312,4 +314,15 @@ cursor: pointer;
   .delete-button
   {
     background-color:rgba(238, 239, 227, 0.939);
+  }
+
+  .footer{
+    color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: center ;
+    align-items: center;
+    justify-content: center ;
+    padding-top: 20%;
+  
+  
   }
